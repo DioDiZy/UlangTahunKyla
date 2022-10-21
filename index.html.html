@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- sweetalert -->
+    <script src="assets/sweetalert/package/dist/sweetalert2.all.js"></script>
+
+    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <title>Ulang Tahun Kah Maniez?</title>
+    <link rel="shortcut icon" href="assets/img/heart.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+ 
+  </head>
+
+  <body>
+    <audio src="assets/music/Still.mp3" autoplay="true"></audio>
+    <div class="preloader">
+      <div class="loading">
+        <img src="assets/img/output-onlinegiftools.gif" width="90%">
+        <p>Bentar ya cantik lagi loading ❤️</p>
+      </div>
+    </div>
+    <div class="container">
+
+        <img src="assets/img/cutegift2.gif" class="img-responsive center-block d-block mx-auto" alt="Foto Ucul">
+        <div class="text-center mx-auto">
+          <h1>Kamu Ultah yawww?? ❤️</h1>
+          <button id="btn-lanjut" class="btn btn-success" onclick="lanjut()">Yess</button>
+          <button  class="btn btn-danger" onclick="Swal.fire({text:'Bohong Anyinkk',confirmButtonText: 'Hehe',});">Engga anyinkk</button>
+        </div>
+    </div>
+    <button id="btn-teka-teki"class="btn btn-primary position-absolute bottom-0" onclick="tekateki()">Teka Teki Yuk</button>
+    <button id="btn-ucapan"class="btn btn-success position-absolute bottom-0 end-0" onclick="ucapan()">Buka Ucapan Dari Aku Yuk</button>
+
+  </body>
+  <script>
+    $(document).ready(function(){
+    $(".preloader").delay(3000).fadeOut();
+    })
+    const ucapan = document.getElementById('btn-ucapan');
+    ucapan .addEventListener('click',function(){
+      Swal.fire({
+  title: 'Hi Pretty Girl!',
+  text: 'HBD FOR YOU,I just want you to know, if I really love you, at 18 years old, I hope you are more mature, more assertive in your choices, smarter and live longer....whatever your decision is the same as crazy later, I just want you to know that I really love you, really love you',
+  imageUrl: 'assets/img/kyla(1).jpeg',
+  imageWidth: 400,
+  imageHeight: 200,
+  imageAlt: 'Custom image',
+  background: '#fff url(assets/img/balun.jpg)',
+  color:'white',
+  confirmButtonText: 'Translate',
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire({
+      title: 'Hi Gadis Cantik!',
+  text: 'Selamat Ulang Tahun,Aku hanya ingin kamu tahu, jika aku benar-benar mencintaimu, di usia 18 tahun, aku harap kamu lebih dewasa, lebih tegas dalam pilihanmu, lebih pintar dan hidup lebih lama....apapun keputusan kamu sama gilang nanti,aku hanya ingin kamu tau bahwa aku sangat menyayangimu,adan sangat menyayangimu.Terimakasiihh <3',
+  imageUrl: 'assets/img/kyla(2).jpeg',
+  imageWidth: 400,
+  imageHeight: 200,
+  imageAlt: 'Custom image',
+  background: '#fff url(assets/img/balun.jpg)',
+  color:'white',
+  confirmButtonText: 'Close',
+})
+  }
+})
+
+    })
+    const tekateki = document.getElementById('btn-teka-teki');
+    tekateki .addEventListener('click',function(){
+      Swal.fire({
+  title: 'Teka Tekinya Dikit kok',
+  text: "Kamu Mau Lanjut ndak?",
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Lanjutt',
+  cancelButtonText:'Engga mao'
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire({
+  title: 'Soalnya cuman 1 xixi',
+  text: "Kamu Sayang aku ga?",
+  icon: 'question',
+  showCancelButton: true,
+  disableCancelButton:true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Sayang Bangettt',
+  cancelButtonText:'Engga',
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire({
+  title: 'Maaciw dah sayang aku',
+  text: "Dio jga sayang kyla kok xixi",
+  icon: 'correct',
+  confirmButtonColor: '#3085d6',
+  confirmButtonText: '❤️',
+  
+})
+  }else if (
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    Swal.fire({
+  title: 'Jawaban Kamu Salah',
+  text: "Kamu kan Sayang aku hihi",
+  icon: 'error',
+  confirmButtonColor: '#3085d6',
+  confirmButtonText: 'Iya Sayang bangett taukkk',
+})
+  }
+})
+  }
+})
+    })
+    const lanjut = document.getElementById('btn-lanjut');
+    lanjut .addEventListener('click',function(){
+      Swal.fire({
+  title: 'Ada Kado Ni kak',
+  text: 'Lanjut Buka Yuk',
+  imageUrl: 'assets/img/bocil-bawa-kado.gif',
+  imageWidth: 200,
+  imageHeight: 200,
+  imageAlt: 'bocil bawa kado',
+  width: 400,
+  padding: '1em',
+  confirmButtonText: 'Buka',
+  backdrop: `
+    rgba(0,0,123,0.4)
+    url("assets/img/balon1.gif")
+    top center
+    no-repeat
+    
+  `
+  
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire({
+      title: 'BOOM!',
+      text: 'Ini Kado Onlinenya kak wkkw,lanjut yuk untuk liat kado offlinenya',
+      imageUrl: 'assets/img/kado-terbuka-hati.gif',
+      imageWidth: 200,
+      imageHeight: 200,
+      imageAlt: 'kado terbuka',
+      showConfirmButton: false,
+      width: 400,
+      footer:' <a href="kado.html" class="btn btn-primary stretched-link">Lanjut</a>',
+      padding: '1em',
+      backdrop: `
+    rgba(0,0,123,0.4)
+    url("assets/img/banyak-hati.gif")
+    top center
+    no-repeat
+    
+  `
+  
+    })
+  } 
+});
+
+    })
+    </script>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</html>
